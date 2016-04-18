@@ -1,0 +1,210 @@
+Mar 29 12:16:13 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=0)
+Mar 29 12:16:22 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=2)
+Mar 29 12:18:05 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=0)
+Mar 29 12:18:13 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=2)
+Mar 29 12:22:51 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=0)
+Mar 29 12:22:58 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=2)
+Mar 29 12:23:02 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=0)
+Mar 29 12:23:03 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=2)
+Mar 29 12:28:14 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=0)
+Mar 29 14:38:54 sadkhin2s-MacBook-Pro cdpd[36429] <Warning>: Saw change in network reachability (isReachable=2)
+Mar 29 15:10:00 sadkhin2s-MacBook-Pro diagnostics_agent[485] <Warning>: AutoSubmitPreference is 0
+--- last message repeated 1 time ---
+Mar 30 16:43:20 sadkhin2s-MacBook-Pro distnoted[267] <Warning>: # distnote server agent  absolute time: 93.721138881   civil time: Wed Mar 30 16:43:20 2016   pid: 267 uid: 501  root: no
+Mar 30 16:43:20 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Scheme mapping file does not exist, creating file.
+Mar 30 16:43:23 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 11 times ---
+Mar 30 16:43:38 sadkhin2s-MacBook-Pro diagnostics_agent[477] <Warning>: AutoSubmitPreference is 0
+--- last message repeated 1 time ---
+Mar 30 16:43:49 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 2 times ---
+Mar 30 16:43:50 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Currently 0 installed placeholders: (
+	)
+Mar 30 16:43:50 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+Mar 30 16:44:57 sadkhin2s-MacBook-Pro ksfetch[499] <Warning>: CFNetwork SSLHandshake failed (-9806)
+Mar 30 16:44:58 sadkhin2s-MacBook-Pro ksfetch[499] <Warning>: CFNetwork SSLHandshake failed (-9802)
+--- last message repeated 1 time ---
+Mar 30 16:44:59 sadkhin2s-MacBook-Pro ksfetch[499] <Warning>: NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
+Mar 30 18:10:01 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 3 times ---
+Mar 31 12:34:17 sadkhin2s-MacBook-Pro diagnostics_agent[477] <Warning>: AutoSubmitPreference is 0
+Mar 31 13:01:47 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+Mar 31 13:56:57 sadkhin2s-MacBook-Pro ReportCrash[9795] <Alert>: Invoking spindump for pid=567 wakeups_rate=336 duration=134 because of excessive wakeups
+Mar 31 13:56:58 sadkhin2s-MacBook-Pro spindump[9749] <Notice>: Saved wakeups_resource.diag report for VirtualBoxVM version 5.0.12 (5.0.12) to /Library/Logs/DiagnosticReports/VirtualBoxVM_2016-03-31-135658_sadkhin2s-MacBook-Pro.wakeups_resource.diag
+Mar 31 13:56:58 sadkhin2s-MacBook-Pro spindump[9749] <Notice>: Saved wakeups_resource.diag report for Microsoft Lync version 14.3.3 (14.3.3) to /Library/Logs/DiagnosticReports/Microsoft Lync_2016-03-31-135658_sadkhin2s-MacBook-Pro.wakeups_resource.diag
+Mar 31 14:02:02 sadkhin2s-MacBook-Pro ReportCrash[9805] <Alert>: Invoking spindump for pid=567 wakeups_rate=166 duration=272 because of excessive wakeups
+Mar 31 14:02:04 sadkhin2s-MacBook-Pro spindump[9749] <Notice>: Saved wakeups_resource.diag report for Microsoft Lync version 14.3.3 (14.3.3) to /Library/Logs/DiagnosticReports/Microsoft Lync_2016-03-31-140204_sadkhin2s-MacBook-Pro.wakeups_resource.diag
+Mar 31 14:03:04 sadkhin2s-MacBook-Pro spindump[9749] <Notice>: Saved wakeups_resource.diag report for VirtualBoxVM version 5.0.12 (5.0.12) to /Library/Logs/DiagnosticReports/VirtualBoxVM_2016-03-31-140304_sadkhin2s-MacBook-Pro.wakeups_resource.diag
+Mar 31 14:11:06 sadkhin2s-MacBook-Pro spindump[9749] <Notice>: Saved wakeups_resource.diag report for VirtualBoxVM version 5.0.12 (5.0.12) to /Library/Logs/DiagnosticReports/VirtualBoxVM_2016-03-31-141106_sadkhin2s-MacBook-Pro.wakeups_resource.diag
+Mar 31 14:17:14 sadkhin2s-MacBook-Pro spindump[9749] <Notice>: Saved wakeups_resource.diag report for VirtualBoxVM version 5.0.12 (5.0.12) to /Library/Logs/DiagnosticReports/VirtualBoxVM_2016-03-31-141714_sadkhin2s-MacBook-Pro.wakeups_resource.diag
+Mar 31 23:41:22 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+Apr  1 00:34:30 sadkhin2s-MacBook-Pro diagnostics_agent[477] <Warning>: AutoSubmitPreference is 0
+Apr  1 13:23:57 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 6 times ---
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac298c0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Saw change in network reachability (isReachable=2)
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac298c0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac03050> connection from pid 13169, checking entitlements...
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:35 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac03050> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad0ba90> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad0ba90> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad0a180> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad0a180> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af2c360> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af2c360> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac32e50> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac32e50> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae0ca50> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae0ca50> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af243d0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af243d0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae0ec90> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae0ec90> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af1b780> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af1b780> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af162a0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af162a0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af28da0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af28da0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae0f3c0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae0f3c0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad0ffb0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad0ffb0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac349f0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac349f0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae11510> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae11510> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac35210> connection from pid 13169, checking entitlements...
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:36 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac35210> connection from pid 13169 with entitlements mask 3
+Apr  1 14:37:58 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac373c0> connection from pid 13169, checking entitlements...
+Apr  1 14:37:58 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:37:58 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac373c0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af22d80> connection from pid 13169, checking entitlements...
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af22d80> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac39dc0> connection from pid 13166, checking entitlements...
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.iCloudHelper'
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac39dc0> connection from pid 13166 with entitlements mask 3
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad142a0> connection from pid 13166, checking entitlements...
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.iCloudHelper'
+Apr  1 14:38:04 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad142a0> connection from pid 13166 with entitlements mask 3
+Apr  1 14:38:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af0e030> connection from pid 13169, checking entitlements...
+Apr  1 14:38:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af0e030> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af25670> connection from pid 13169, checking entitlements...
+Apr  1 14:38:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af25670> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad150d0> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad150d0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad15a40> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad15a40> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad10730> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad10730> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac3a2c0> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac3a2c0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af19930> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af19930> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac3a9c0> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac3a9c0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af20930> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af20930> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad18130> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad18130> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad14780> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad14780> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae14e30> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae14e30> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af1aa90> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af1aa90> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae16500> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae16500> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae17b00> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae17b00> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae18cf0> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae18cf0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af26de0> connection from pid 13200, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.lakitu'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af26de0> connection from pid 13200 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad3b870> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad3b870> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad3b4b0> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad3b4b0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad3b020> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad3b020> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad3d870> connection from pid 13169, checking entitlements...
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:06 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad3d870> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af23170> connection from pid 13169, checking entitlements...
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af23170> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae1abe0> connection from pid 13169, checking entitlements...
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae1abe0> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ad40810> connection from pid 13169, checking entitlements...
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ad40810> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5af30150> connection from pid 13169, checking entitlements...
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5af30150> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac41060> connection from pid 13169, checking entitlements...
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:07 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac41060> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac61d00> connection from pid 13169, checking entitlements...
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac61d00> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac61e60> connection from pid 13169, checking entitlements...
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac61e60> connection from pid 13169 with entitlements mask 3
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ae1b820> connection from pid 13169, checking entitlements...
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.preferences.icloud.remoteservice'
+Apr  1 14:38:09 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ae1b820> connection from pid 13169 with entitlements mask 3
+Apr  1 14:40:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Received new connection <NSXPCConnection: 0x7ffa5ac3eb90> connection from pid 13166, checking entitlements...
+Apr  1 14:40:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Unknown client type with bundleID 'com.apple.iCloudHelper'
+Apr  1 14:40:05 sadkhin2s-MacBook-Pro cdpd[13188] <Warning>: Accepting new connection <NSXPCConnection: 0x7ffa5ac3eb90> connection from pid 13166 with entitlements mask 3
+Apr  1 14:45:25 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 3 times ---
+Apr  1 17:35:07 sadkhin2s-MacBook-Pro storeassetd[349] <Error>: -[__NSDictionary0 downloads]: unrecognized selector sent to instance 0x7fa2d8d03170
+Apr  1 21:54:41 sadkhin2s-MacBook-Pro storeassetd[349] <Warning>: Communications error: <OS_xpc_error: <error: 0x7fff79b09b90> { count = 1, contents =
+		"XPCErrorDescription" => <string: 0x7fff79b09f40> { length = 22, contents = "Connection interrupted" }
+	}>
+Apr  2 01:01:27 sadkhin2s-MacBook-Pro diagnostics_agent[477] <Warning>: AutoSubmitPreference is 0
+--- last message repeated 4 times ---
+Apr  4 13:53:00 sadkhin2s-MacBook-Pro lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 4 times ---
+Apr  5 10:29:54 sadkhin2s-MBP diagnostics_agent[477] <Warning>: AutoSubmitPreference is 0
+Apr  5 10:51:51 sadkhin2s-MBP lsd[271] <Warning>: LaunchServices: Could not store lsd-identifiers file at /private/var/db/lsd/com.apple.lsdschemes.plist
+--- last message repeated 13 times ---
