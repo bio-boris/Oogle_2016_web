@@ -137,13 +137,17 @@ if(isset($_GET['insert'])){
 
             echo '<pre>';
             print "<b>QUERY BLAST</b>\n";
-            print_r($query_blast);
-            print "<b>QUERYANNOTATIONS</b>\n";
-            print_r($query_annotations);
-            print "<b>SUBJECT BLAST</b>\n";
-            print_r($subject_blast);
-            print "<b>SUBJECTANNOTATIONS</b>\n";
-            print_r($subject_annotations);
+           # print_r($query_blast);
+            print json_encode($query_blast);
+            print "\n\n<b>QUERYANNOTATIONS</b>\n";
+           # print_r($query_annotations);
+            print json_encode($query_annotations);
+            print "\n\n<b>SUBJECT BLAST</b>\n";
+           # print_r($subject_blast);
+            print json_encode($subject_blast);
+            print "\n\n<b>SUBJECTANNOTATIONS</b>\n";
+            #print_r($subject_annotations);
+            print json_encode($subject_annotations);
 
             echo '</pre>';
         }

@@ -1,4 +1,8 @@
 <?php
+#require_once("php-login-minimal/classes/Login.php");
+#require_once("php-login-minimal/config/db.php");
+
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
