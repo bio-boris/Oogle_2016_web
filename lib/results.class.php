@@ -40,9 +40,9 @@ class results{
         $blast['blast'] = $datas;
         $blast['query_pac'] = $pacQuery;
         $blast['subject_pac']= $pacSubject;        
-        print "<br><br>";
-        print_r($blast);
-        print "<br><br>";
+        #print "<br><br>";
+        #print_r($blast);
+       # print "<br><br>";
         return $blast;
 
     }
@@ -54,9 +54,9 @@ class results{
                   ]
                   ]
                  );
-        print "<br><br>";
-        print_r( $datas ); 
-        print "<br><br>";
+       # print "<br><br>";
+       # print_r( $datas ); 
+        #print "<br><br>";
         return $datas;
 
     }

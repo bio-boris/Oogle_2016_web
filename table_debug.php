@@ -1,3 +1,16 @@
+<?php
+
+require_once("lib/config/db.php");
+require_once("lib/classes/Login.php");
+$login = new Login();
+include "lib/main.php";
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +31,10 @@
 <h2><a href='index.php'>Start Over</a> </h2>
 <h2><a href='queries.php'>Queries</a> </h2>
 <?php
-include "lib/main.php";
+
 if(isset($_GET['insert'])){
     $results = new results();
     $job = $db->select("query","*",['session'=>$_GET['insert']]);
-#    var_dump($job);
-#    print $job;
-#    print_r($job);
-#    $job = $db->debug()->select("query","*",['session'=>$_GET['insert']]);
 
     $post = unserialize($job[0]['post']);
     $query_org  = $post['query_dropdown'];
@@ -40,8 +49,6 @@ if(isset($_GET['insert'])){
         if($interval != ''){
             print "<h4>Working on interval[ $interval ] on <b>$query_org</b> against <b>$subject_org</b><br><br></h4>";
             $pacIDs = $results->getQueryPacIDs($db,$query_org,$interval);
-            print "pacID=";       
-            print_r($pacIDs);
             $query_blast = $results->getBlastResults($db,$subject_org,$pacIDs);
             $query_blast_result = $query_blast['blast'];
             $subject_pac=$query_blast['subject_pac'];
@@ -52,18 +59,23 @@ if(isset($_GET['insert'])){
             $query_annotations = $results->getAnnotations($db,$query_org,$query_blast['query_pac']);           
             $subject_annotations = $results->getAnnotations($db,$subject_org,$query_blast['subject_pac']);           
 
+            $saveHeader='';
+            if ($login->isUserLoggedIn() == true) {
+                $saveHeader="<th>Save</th>"   ; 
+            }
             echo "<table class='table' id='$interval'>";
             $i=0;
             echo "<thead><tr>
-                <th>Query</th>
-                <th>Subject</th>
+                $saveHeader
+                <th>Query Accession</th>
+                <th>Subject Accession</th>
                 <th>%ID</th>
                 <th>Align_Len</th>
                 <th>Expect</th>
                 <th>Bit</th>
-                <th>queryPAC</th>
-                <th>subjPAC</th>
-                <th>Hit for Subj</th>
+                <th>Query_ID</th>
+                <th>Subject_ID</th>
+                <th>Subject_TopHit</th>
                 <th>%ID</th>
                 <th>Align_Len</th>
                 <th>Expect</th>
@@ -75,6 +87,10 @@ if(isset($_GET['insert'])){
                 </thead>";
             foreach($pacIDs as $pac){
                 echo "<tr>";
+                if ($login->isUserLoggedIn() == true) {
+                        $hit=$query_blast_result[$i]['subject_pac'];
+                        echo "<td><a href='save.php?pac=$pac&hit=$hit'>Save</a></td>";
+                }
 
                 foreach($query_blast_result[$i] as $key=>$val){
                     if($key=='query_org' || $key=='subject_org' || $key=='rank'){
@@ -86,6 +102,7 @@ if(isset($_GET['insert'])){
                     if($key=='query_id'){
                         $query_id=$val;
                     }
+
                     print "<td>$val</td>";
                 }
                 foreach($subject_blast_result as $result){
@@ -139,22 +156,23 @@ if(isset($_GET['insert'])){
 
             }
             echo "</table>"; 
+            /*
+               echo '<pre>';
+               print "<b>QUERY BLAST</b>\n";
+# print_r($query_blast);
+print json_encode($query_blast);
+print "\n\n<b>QUERYANNOTATIONS</b>\n";
+# print_r($query_annotations);
+print json_encode($query_annotations);
+print "\n\n<b>SUBJECT BLAST</b>\n";
+# print_r($subject_blast);
+print json_encode($subject_blast);
+print "\n\n<b>SUBJECTANNOTATIONS</b>\n";
+#print_r($subject_annotations);
+print json_encode($subject_annotations);
 
-            echo '<pre>';
-            print "<b>QUERY BLAST</b>\n";
-           # print_r($query_blast);
-            print json_encode($query_blast);
-            print "\n\n<b>QUERYANNOTATIONS</b>\n";
-           # print_r($query_annotations);
-            print json_encode($query_annotations);
-            print "\n\n<b>SUBJECT BLAST</b>\n";
-           # print_r($subject_blast);
-            print json_encode($subject_blast);
-            print "\n\n<b>SUBJECTANNOTATIONS</b>\n";
-            #print_r($subject_annotations);
-            print json_encode($subject_annotations);
-
-            echo '</pre>';
+echo '</pre>';
+             */  
         }
         //displayBlast($blast_results);
     }

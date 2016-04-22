@@ -1,7 +1,9 @@
 <?php
 
+require_once("lib/config/db.php");
+require_once("lib/classes/Login.php");
 require_once 'lib/medoo.php';
-
+$login = new Login();
 
 // Initialize
 // Move this to config
@@ -33,7 +35,7 @@ $database = new medoo([
 <form class='form-inline' action='<?php echo $_SERVER['PHP_SELF'] ?>' method='get' id='my_form'>
 <?php
 echo "<h1><a href='queries.php'> Team 27 - CS 411 Queries </a> </h1>";
-echo "<h2>Public Saved Queries</h2>";
+echo "<h2>Private Queries for <b>" . ucfirst($_SESSION['user_name']) . "</b></h2>";
 echo "<h5><a href='index.php'>See Main Page</a></h5>";
 #echo "This page demonstrates the results of the insert";
 
@@ -60,9 +62,9 @@ foreach($queries as $query){
     foreach($query as $key=>$val){
         if($key =='private' && $val==0){
             $needToSkip = 1;
-
         }
-        if($key=='username' && $val !='anonymous'){
+        $username = $_SESSION['user_name'];
+        if($key=='username' && $val !=$username){
             $needToSkip=1;
         }
 
@@ -75,8 +77,8 @@ foreach($queries as $query){
         if($key=='session'){
             echo "<td><a href='table.php?insert=$val'>$val</a></td>";
         }
-        else if($key=='private' || $key=='username'){
-            #
+        else if($key =='username' || $key=='private'){
+
         }
         elseif($key =='post'){
             $array = unserialize($val);

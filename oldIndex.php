@@ -1,13 +1,13 @@
 <?php
 require_once("lib/config/db.php");
+// load the login class
 require_once("lib/classes/Login.php");
+
+
+
 
 require_once 'lib/medoo.php';
 require_once 'lib/main.php';
-
-// create a login object. when this object is created, it will do all login/logout stuff automatically
-// so this single line handles the entire login process. in consequence, you can simply ...
-$login = new Login();
 
 // Initialize
 // Move this to config
@@ -36,9 +36,10 @@ if(isset($_POST['go'])){
         else{
             $insertID='123';
             $POST = $_POST;
-            $private = isset($_POST['saved'])?1:0;
-            $username = isset($_SESSION['user_name'])?($_SESSION['user_name']):'anonymous';
-            $session=insert($database,$POST,$private,$username);
+            if($_POST['saved'] == 'on'){
+                $private=1;
+            }
+            $session=insert($database,$POST,$private);
             header("Location: table.php?insert=$session");
         }
     }
@@ -46,6 +47,20 @@ if(isset($_POST['go'])){
         print "Error";
     }
 
+}
+
+
+// create a login object. when this object is created, it will do all login/logout stuff automatically
+// so this single line handles the entire login process. in consequence, you can simply ...
+$login = new Login();
+if ($login->isUserLoggedIn() == true) {
+    // the user is logged in. you can do whatever you want here.
+    // for demonstration purposes, we simply show the "you are logged in" view.
+    include("lib/views/logged_in.php");
+} else {
+    // the user is not logged in. you can do whatever you want here.
+    // for demonstration purposes, we simply show the "you are not logged in" view.
+    include("lib/views/not_logged_in.php");
 }
 
 
@@ -68,12 +83,19 @@ $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();   
         });
 
+}
+
+
+});
+
+
 </script>
 
 
 </head>
 <body>
 <div class='container'>
+<form name='oogle' class='form-inline' action='<?php echo $_SERVER['PHP_SELF'] ?>' method='post'>
 
 <?php
 #print_r($_POST);
@@ -81,26 +103,16 @@ $(document).ready(function(){
 
 $orgs = file('available_org');
 
-$queryOrg=isset($_POST['query_dropdown'])?$_POST['query_dropdown']:null;
-$subjectOrg=isset($_POST['subject_dropdown'])?$_POST['subject_dropdown']:null;
+$query=isset($_POST['query_dropdown'])?$_POST['query_dropdown']:null;
+$subject=isset($_POST['subject_dropdown'])?$_POST['subject_dropdown']:null;
 
-$query_dropdown = orgDropdown($orgs,$queryOrg,"query_dropdown");
-$subject_dropdown = orgDropdown($orgs,$subjectOrg,"subject_dropdown");
+$query_dropdown = orgDropdown($orgs,$query,"query_dropdown");
+$subject_dropdown = orgDropdown($orgs,$subject,"subject_dropdown");
 
 $tooltip='<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="IGV Format (Chr:Start-Stop)" ><u>?</u></a>';
 #if not loggedin
 echo "<div class='pull-right'>";
-$welcome_msg   = isset($_SESSION['user_name'])  ? "Welcome back, {$_SESSION['user_name']}." : 'Welcome Anonymous.<br>';
-$logout_link   = isset($_SESSION['user_name'])  ? "<li><a href='{$_SERVER['PHP_SELF']}?logout'>Logout</a><br></li>":'';
-$register_link    = !isset($_SESSION['user_name'])  ? "<li><a href='register.php'>Register</a><br></li>" :'';
-$saved_searches   = isset($_SESSION['user_name'])  ? "<li><a href='saved_searches.php'>Saved Searches</li>" :'';
-$saved_proteins   = isset($_SESSION['user_name'])  ? "<li><a href='saved_genes.php'>Saved Genes</li>" :'';
-
-$login_link    = !isset($_SESSION['user_name'])  ? "<li><a href='#' onClick=\"$(hidden_login).fadeIn()\">Login</a><br></li>" :'';
-
-echo "$welcome_msg <ul> $login_link$register_link $saved_searches $saved_proteins $logout_link </ul>";
-
-#echo "Welcome $username.</br><ul><li> <a href='register.php'>Register</a><br></li> <a href='#' onCLick=\"$(hidden_login).fadeIn()\">Login</a> $logout "; 
+echo "Welcome anonymous.</br> <a href='register.php'>Register</a> <a href='login.php'>Login</a>"; 
 echo "</div>";
 #lese
 #echo "
@@ -110,35 +122,23 @@ echo "</div>";
 #$login = new Login();
 
 
-if ($login->isUserLoggedIn() == true) {
-    // the user is logged in. you can do whatever you want here.
-    // for demonstration purposes, we simply show the "you are logged in" view.
-    //include("lib/views/logged_in.php");
-} else {
-    // the user is not logged in. you can do whatever you want here.
-    // for demonstration purposes, we simply show the "you are not logged in" view.
-    include("lib/views/not_logged_in.php");
-}
-
 
 
 
 echo "<h1><a href='index.php'> Team 27 - CS 411 </a> </h1>";
-echo "<h5><a href='queries.php'>See Public Saved Queries</a></h5>";
+echo "<h5><a href='queries.php'>See Queries</a></h5>";
 echo "<h4>Step 1: Select a subject organism's genome.</h4>";
-echo "<form name='oogle' id='oogle' class='form-inline' action='{$_SERVER['PHP_SELF']}' method='post'>";
 echo $query_dropdown;
-echo chrDropdown($database,$queryOrg);
+echo chrDropdown($database,$query);
 echo "<h4>Step 2: Choose intervals on the genome: $tooltip </h4>";
-$query_interval = isset($_POST['query_input'])?$_POST['query_input']:'';
-echo "<textarea class='form-control' name='query_input' placeholder='Chr1:1-10000'>$query_interval</textarea><br>";
+echo "<textarea class='form-control' name='query_input' placeholder='Chr1:1-10000'>{$query}</textarea><br>";
 
 ?>
 
 <?php
 echo "<h4>Step 3: Select an organism to search against.</h4>";
 echo $subject_dropdown;
-echo chrDropdown($database,$subjectOrg);
+echo chrDropdown($database,$subject);
 #echo "<h4>Step 4: Choose intervals on the genome: $tooltip</h4>";
 #echo "<textarea class='form-control' name='subject_input'>{$_POST['subject_input']}</textarea>"
 
@@ -151,7 +151,7 @@ echo chrDropdown($database,$subjectOrg);
 
 <?
 function orgDropdown($orgs,$selected,$name){
-    $html = "<select name='$name' class='form-control' onchange='$(\"#oogle\").submit()' >";
+    $html = "<select name='$name' class='form-control' onchange='this.form.submit()' >";
     $html .= "<option>Select Organism</option>";
     foreach($orgs as $org){
         $org = rtrim($org);
@@ -167,7 +167,9 @@ function orgDropdown($orgs,$selected,$name){
     return "$html</select>";
 }
 function chrDropdown($db,$org){
+#$db->select("CHR","*",['query_org']=$org;        
         $chrs= $db->select("chrUnique","*",['query_org' =>$org]);        
+#print $db->debug()->select("chrUnique","*",['query_org' =>$org]);        
         $dropdown = "<select class='form-control'>";
 
         foreach($chrs as $chr){
@@ -177,20 +179,19 @@ function chrDropdown($db,$org){
         return $dropdown;
         }
 
-        function insert($db,$post,$private=1,$username){
+        function insert($db,$post,$private=0){
         $time =time();
         $session = md5($time);
 
         $serial = serialize($post);
-        $debug = $db->insert("query",[
+        /*$debug = $db->insert("query",[
           'id'=>null,
           'date'=>null,
           'private'=>"$private",
-          'username'=>$username,
           'post'=>$serial,
           'session'=>$session,
           ]);
-         
+         */
         return $session; 
 #    print "<br><br>SESSION=$session based on $time" ;
 
