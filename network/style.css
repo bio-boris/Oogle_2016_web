@@ -1,0 +1,273 @@
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node.hidden {
+	opacity: .2;
+}
+
+.node.highlighted {
+	stroke: red;
+}
+
+.link {
+  stroke-opacity: .6;
+  stroke-width: 3px;
+}
+
+.link.highlighted {
+	stroke: #f6931f;
+}
+
+.link.hidden {
+	stroke-opacity: 0;
+}
+
+.amount {
+	position: relative;
+	text-align: center;
+	background-color: #546372;
+	left: 25px;
+	width: 200px;
+}
+
+.slider {
+	position: relative;
+	left: 25px;
+}
+
+.single_slider {
+	position: relative;
+	left: 25px;
+}
+
+#scatterTooltip {
+	position: absolute;
+	background: white;
+	text-align: center;
+	z-index: 1000;
+	opacity: 0;
+}
+
+#scatterToggle {
+	position: relative;
+	top: 10px;
+	left: 300px;
+}
+
+#LengthLinkFilters {
+	margin-top: 10px;
+	margin-left: 25px;
+	color: white;
+}
+
+#LinkSliders {
+	margin-top: 10px;
+}
+
+#NodeSliders {
+	margin-top: 10px;
+}
+
+#CatLinkFilters {
+	color: white;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+#CatNodeFilters {
+	color: white;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+#ColorFilters {
+	color: white;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+#RadialOptions {
+	color: white;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+#ForceSliders {
+	margin-top: 10px;
+}
+
+.tooltip {
+    opacity:0;
+    text-shadow:1px 1px 0px gray;
+}
+
+div.tooltip {
+    background: white;
+    position: absolute;
+    text-align:center;
+	z-index: 1000;
+}
+
+#svg {
+    cursor: crosshair;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 400px;
+	bottom: 0px;
+	padding: 10px;
+	background: #f6931f;
+	overflow-y: hidden;
+}
+
+#menu {
+	color: white;
+	position: fixed;
+	right: 0;
+	top: 0px;
+	bottom: 0;
+	width: 400px;
+	background-color: #546372;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.header {
+	position: relative;
+	top: 0px;
+	left: 10px;
+	color: white;
+	font-size: 100%;
+}
+
+.node.pinned {
+	stroke: red;
+}
+
+.ui-accordion {
+	width: 375px;
+	background-image:none;
+	color: #546372;
+	height: auto;
+}
+
+.ui-accordion-content {
+	background-image: none;
+	background-color: #546372;
+	border: none;
+	height: auto;
+	font-size: .6em;
+}
+
+.ui-accordion .ui-accordion-content {
+	padding-right: 8em;
+}
+
+.ui-slider .ui-slider-horizontal {
+	padding-right: 15em;
+}
+
+.ui-accordion-header {
+	background-image:none;
+	background-color: #546372;
+}
+
+.filterTitle {
+	color: white;
+}
+
+.histButton {
+}
+
+.inner {
+	display: inline-block;
+}
+
+.outer {
+	width: 100%;
+}
+
+.option {
+	margin-left: 25px;
+}
+
+.LinkInfoTooltip {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: #546372;
+	color: white;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.NumInfoTooltip {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	background: #546372;
+	color: white;
+}
+
+#viewToggle{
+	position: fixed;
+	z-index: 100;
+	left: 70em;
+	top: 6.75em;
+}
+
+#linkToggle{
+	position: fixed;
+	z-index: 100;
+	left: 78.5em;
+	top: 6.75em;
+}
+
+#Data{
+	position: fixed;
+	z-index: 100;
+	left: 60em;
+	top: 4.5em;
+}
+
+#NodeSearch {
+	position: fixed;
+	z-index: 100;
+	left: 3em;
+	top: 4em;
+}
+
+.lasso path {
+  stroke:  #f6931f;
+  stroke-width:2px;
+}
+
+.lasso .drawn {
+  fill-opacity:.05 ;
+}
+
+.lasso .loop_close {
+  fill:none;
+  stroke-dasharray: 4,4;
+}
+
+.lasso .origin {
+  fill:#f6931f;
+  fill-opacity:.5;
+}
+
+.not_possible {
+  opacity: .1;
+}
+
+.possible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: .1;
+}
