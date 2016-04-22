@@ -432,13 +432,15 @@ console.log(graph);
 			
 			//Create and populate filters for categorical link metadata.
 			jQuery.each(link_type_keys, function(key) {
-				$("#CatLinkFilters").append("<input id="+this+" type='checkbox' value='"+this+"' checked>"+this+"</input>");
-				$("#CatLinkFilters").append("</br></br>");
-				var temp = this;
-				link_type_values[this].forEach(function(value) {
-					$("#CatLinkFilters").append("<input id="+temp+value+" type='checkbox' class='option' value='"+value+"' checked>"+value+"</input>");
+				if (link_type_keys[key] != "rbh") {
+					$("#CatLinkFilters").append("<input id="+this+" type='checkbox' value='"+this+"' checked>"+this+"</input>");
 					$("#CatLinkFilters").append("</br></br>");
-				});	
+					var temp = this;
+					link_type_values[this].forEach(function(value) {
+						$("#CatLinkFilters").append("<input id="+temp+value+" type='checkbox' class='option' value='"+value+"' checked>"+value+"</input>");
+						$("#CatLinkFilters").append("</br></br>");
+					});	
+				}
 			});
 			
 			
@@ -652,6 +654,8 @@ console.log(graph);
 				force.start();
 			});
 			
+			var link_length_scale = d3.scale.linear()
+				.range([0,1]);
 			//Listen for changes in link length selection.
 			//Ajust link length accordingly.
 			$(".Length").change(function() {
@@ -661,7 +665,12 @@ console.log(graph);
 				force.stop();
 				force.linkDistance(function(d) {
 					if (link_length_filter == "None") return .5*link_distance;
-					else return link_distance*d.link_values[link_length_filter]; 
+					else {
+						var min = link_value_values[link_length_filter][0];
+						var max = link_value_values[link_length_filter][1];
+						link_length_scale.domain([min,max]);
+						return link_distance*link_length_scale(d.link_values[link_length_filter]);
+					} 
 				});
 				force.start();
 			});
@@ -787,7 +796,8 @@ console.log(graph);
 						if (dragging == false) {
 							$('.LinkInfoTooltip').append('<p>Annotations</p>');
 							annotation_keys.forEach(function(e) {
-								$('.LinkInfoTooltip').append('<p style="margin-left:15px">'+e+': '+d.annotations[e]+'</p>');
+								if (d.annotations[e] == null || d.annotations[e] == "") {}
+								else {$('.LinkInfoTooltip').append('<p style="margin-left:15px">'+e+': '+d.annotations[e]+'</p>');}
 							});							
 							var cur_index = d.index;
 							d3.selectAll('.node').classed('hidden',true);
@@ -894,6 +904,15 @@ console.log(graph);
 						})
 						.on('click',function(d) {
 						});
+						link.attr("stroke", function(d) {
+							if (d["link_types"]["rbh"]) {
+								return "red";
+							}
+							else if (d["link_types"]["rank"] == "1") {
+								return "black"
+							}
+							else return "#999";
+						})
 					//link.forEach(function(d) {console.log(d)});
 					return link.exit().remove();
 				}
