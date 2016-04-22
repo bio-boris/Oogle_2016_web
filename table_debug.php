@@ -51,11 +51,14 @@ if(isset($_GET['insert'])){
             $pacIDs = $results->getQueryPacIDs($db,$query_org,$interval);
             $query_blast = $results->getBlastResults($db,$subject_org,$pacIDs);
             $query_blast_result = $query_blast['blast'];
+            $query_pac=$query_blast['query_pac'];
+            echo "<pre>"; 
+            print_r($query_blast);
+            echo "</pre>";
+
             $subject_pac=$query_blast['subject_pac'];
             $subject_blast = $results->getBlastResults($db,$query_org,$subject_pac);
             $subject_blast_result = $subject_blast['blast']; 
-
-#Now get annotations
             $query_annotations = $results->getAnnotations($db,$query_org,$query_blast['query_pac']);           
             $subject_annotations = $results->getAnnotations($db,$subject_org,$query_blast['subject_pac']);           
 
@@ -63,116 +66,141 @@ if(isset($_GET['insert'])){
             if ($login->isUserLoggedIn() == true) {
                 $saveHeader="<th>Save</th>"   ; 
             }
-            echo "<table class='table' id='$interval'>";
-            $i=0;
+            echo "<table class='table table-bordered table-striped' id='$interval'>";
+            $interval_number=0;
             echo "<thead><tr>
-                $saveHeader
+                $saveHeader 
                 <th>Query Accession</th>
                 <th>Subject Accession</th>
-                <th>%ID</th>
-                <th>Align_Len</th>
-                <th>Expect</th>
-                <th>Bit</th>
+                <th>Rank</th>
                 <th>Query_ID</th>
                 <th>Subject_ID</th>
-                <th>Subject_TopHit</th>
                 <th>%ID</th>
                 <th>Align_Len</th>
                 <th>Expect</th>
                 <th>Bit</th>
-                <th>HitPAC</th>
+                <th>Subject_TopHit_ACC</th>
+                <th>Subject_TopHit_PAC</th>
+                <th>%ID</th>
+                <th>Align_Len</th>
+                <th>Expect</th>
+                <th>Bit</th>
                 <th>Annotations for Query</th>
                 <th>Annotations For Subject</th>
+                <th>Common Annotations</th>
                 </tr>
                 </thead>";
-            foreach($pacIDs as $pac){
-                echo "<tr>";
+#$subject_pac=$query_blast['subject_pac'];
+#          $subject_blast = $results->getBlastResults($db,$query_org,$subject_pac);
+#        $subject_blast_result = $subject_blast['blast'];
+#         $query_annotations = $results->getAnnotations($db,$query_org,$query_blast['query_pac']);
+#          $subject_annotations = $results->getAnnotations($db,$subject_org,$query_blast['subject_pac']);
+            foreach($query_blast_result as $row){
+                print "<tr>";
                 if ($login->isUserLoggedIn() == true) {
-                        $hit=$query_blast_result[$i]['subject_pac'];
-                        echo "<td><a href='save.php?pac=$pac&hit=$hit'>Save</a></td>";
+                    $pac= $row['query_pac'];
+                    $hit=$query_blast_result[$interval_number]['subject_org'];
+                    echo "<td><a href='save.php?pac=$pac&subject_org=$hit'>Save gene</a></td>";
                 }
+                print "<td>".$row['query_id']."</td>";
+                print "<td>".$row['subject_id']."</td>";
+                print "<td>".$row['rank']."</td>";
+                print "<td>".$row['query_pac']."</td>";
+                print "<td>".$row['subject_pac']."</td>";
+                print "<td>".$row['percent_id']."</td>";
+                print "<td>".$row['alignment_length']."</td>";
+                print "<td>".$row['expect']."</td>";
+                print "<td>".$row['bitscore']."</td>";
 
-                foreach($query_blast_result[$i] as $key=>$val){
-                    if($key=='query_org' || $key=='subject_org' || $key=='rank'){
-                        continue;
-                    }
-                    if($key=='subject_pac'){
-                        $subject_pac=$val;
-                    }
-                    if($key=='query_id'){
-                        $query_id=$val;
-                    }
+                foreach($subject_blast_result as $s_row){
+                    if($row['subject_pac'] == $s_row['query_pac']){
+                        if($s_row['subject_pac'] == $row['query_pac']){
+                            print "<td><font color='red'>{$s_row['subject_id']}</font></td>";
+                            print "<td><font color='red'>{$s_row['subject_pac']}</font></td>";
 
-                    print "<td>$val</td>";
-                }
-                foreach($subject_blast_result as $result){
-                    if($result['query_pac'] == $subject_pac){
-                        foreach($result as $key=>$val){
-                            if($key=='query_org' || $key=='subject_org' || $key=='rank' ||
-                                    $key=='query_id' || $key=='query_pac'){
-                                continue;
-                            }
-                            if($key=='subject_id'){
-                                if($val==$query_id){
-                                    print "<td><b><font color='red'>$val</font></b></td>";
-                                }
-                                else{
-                                    print "<td>$val</td>";
-
-                                }   
-                            }
-                            else{
-                                print "<td>$val</td>";
-                            }        
                         }
+                        else{
+                            print "<td>{$s_row['subject_id']}</td>";
+                            print "<td>{$s_row['subject_pac']}</td>";
+                        }    
+                        print "<td>{$s_row['percent_id']}</td>";
+                        print "<td>{$s_row['alignment_length']}</td>";
+                        print "<td>".$s_row['expect']."</td>";
+                        print "<td>".$s_row['bitscore']."</td>";
+
+                        break;
                     }
                 }
-
                 foreach($query_annotations as $annotation){
-                    if($annotation['query_pac'] == $pac){
+                    if($annotation['query_pac'] == $row['query_pac']){
+                        $query_annotations_array = $annotation;
                         print "<td>";
+                        print "<table border=1 style='border:gray'>";
+                        print "<thead><th>Annotation</th><th>Val</th></thead>";
                         foreach($annotation as $key=>$val){
-                            print "$key:$val<br>";
+                            if(isset($val) && strlen($val) >1){
+                                print "<tr><td>$key </td><td>$val</td>";
+                            }
                         }
+                        print "</table>";
                         print "</td>";
                     }
                 }
+
                 foreach($subject_annotations as $annotation){
-                    if($annotation['query_pac'] == $subject_pac){
+                    if($annotation['query_pac'] == $row['subject_pac']){
+                        $subject_annotations_array = $annotation;
                         print "<td>";
+                        print "<table border=1 style='border:gray' >";
+                        print "<thead><th>Annotation</th><th>Val</th></thead>";
                         foreach($annotation as $key=>$val){
-                            print "$key:$val<br>";
+                            if(isset($val) && strlen($val) >1){
+                                print "<tr><td>$key </td><td>$val</td></tr>";
+                            }
                         }
+                        print "</table>";
                         print "</td>";
                     }
                 }
+            
+                $common_annot;
+                foreach($query_annotations_array as $key=>$val){
+                    foreach($subject_annotations_array as $key2=>$val2){
+                        if(strlen($val) > 1 && $val == $val2){
+                            $common_annot[$val2]=null ;
+                        }
+                    }
+                }
+                print "<td>";
+                foreach($common_annot as $k=>$v){
+                        print "$k</br>";
+                }
+                print "</td>";
+
 #now find blast results for subject, 
 #can't go by iterator due to duplicates being eliminated
                 echo "</tr>";
 
 
-                $i++;
+                $interval_number++;
 
 
             }
-            echo "</table>"; 
-            /*
-               echo '<pre>';
-               print "<b>QUERY BLAST</b>\n";
+            echo '<pre>';
+            print "<b>QUERY BLAST</b>\n";
 # print_r($query_blast);
-print json_encode($query_blast);
-print "\n\n<b>QUERYANNOTATIONS</b>\n";
+            print json_encode($query_blast);
+            print "\n\n<b>QUERYANNOTATIONS</b>\n";
 # print_r($query_annotations);
-print json_encode($query_annotations);
-print "\n\n<b>SUBJECT BLAST</b>\n";
+            print json_encode($query_annotations);
+            print "\n\n<b>SUBJECT BLAST</b>\n";
 # print_r($subject_blast);
-print json_encode($subject_blast);
-print "\n\n<b>SUBJECTANNOTATIONS</b>\n";
+            print json_encode($subject_blast);
+            print "\n\n<b>SUBJECTANNOTATIONS</b>\n";
 #print_r($subject_annotations);
-print json_encode($subject_annotations);
+            print json_encode($subject_annotations);
 
-echo '</pre>';
-             */  
+            echo '</pre>';
         }
         //displayBlast($blast_results);
     }

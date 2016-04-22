@@ -27,7 +27,6 @@ class results{
                 "AND" => [
                 "query_pac" => $listOfPacIDs,
                 "subject_org" => $org,
-                "rank" => 1
                 ]
                 ]
                 );
